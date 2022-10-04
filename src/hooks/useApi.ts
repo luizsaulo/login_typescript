@@ -10,11 +10,11 @@ export const useApi = () => ({
         return response.data;
     },
     signin: async (email: string, password: string) => {
-        const response = await api.post('/sigin', { email, password });
         return {
-            user: { id: 3, name: 'James' email: 'james@gmail.com'},
+            user: { id: 3, name: 'James', email: 'james@gmail.com'},
             token: '123456'
         };
+        const response = await api.post('/sigin', { email, password });
         return response.data;
     },
     logout: async () => {
